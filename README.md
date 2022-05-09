@@ -14,7 +14,9 @@ Contents
   
 #### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-multi-threading-python/tree/main/RTSP_python_multi_threading)
   - Streaming results
+  
   <img src="https://user-images.githubusercontent.com/52263269/167385545-d4338dd8-0a63-4409-a64c-35f6d91a15f1.png" width="60%"></img>
+  
   - Separating the thread that reads the frame from rtsp server and the thread that shows the read frame 
   - Main thread: displaying the frame read from rtsp server
   - RTSP frame receiver thread: queue the frame read from rtsp server
