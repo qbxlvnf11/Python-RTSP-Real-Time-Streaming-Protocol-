@@ -8,13 +8,14 @@ Description
 Contents
 =============
 
-#### - [PyAV RTSP streaming]()
+#### - [PyAV RTSP streaming](https://github.com/qbxlvnf11/RTSP-multi-threading-python/blob/main/RTSP_python_test.ipynb)
   - Simple RTSP streaming code using PyAV in jupyter notebook
   
-#### - [RTSP streaming with multi threading]()
+#### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-multi-threading-python/tree/main/RTSP_python_multi_threading)
   - Separating the thread that reads the frame from rtsp server and the thread that shows the read frame 
   - Main thread: displaying the frame read from rtsp server
   - RTSP frame receiver thread: queue the frame read from rtsp server
+  - Parameters: referencing the param.py
   
 How to use
 =============
