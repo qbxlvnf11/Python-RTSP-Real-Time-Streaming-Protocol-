@@ -1,4 +1,3 @@
-<img src="https://user-images.githubusercontent.com/52263269/167385545-d4338dd8-0a63-4409-a64c-35f6d91a15f1.png" width="90%"></img>
 
 Description
 =============
@@ -14,6 +13,8 @@ Contents
   - Simple RTSP streaming code using PyAV in jupyter notebook
   
 #### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-multi-threading-python/tree/main/RTSP_python_multi_threading)
+  - Streaming ...
+  <img src="https://user-images.githubusercontent.com/52263269/167385545-d4338dd8-0a63-4409-a64c-35f6d91a15f1.png" width="90%"></img>
   - Separating the thread that reads the frame from rtsp server and the thread that shows the read frame 
   - Main thread: displaying the frame read from rtsp server
   - RTSP frame receiver thread: queue the frame read from rtsp server
