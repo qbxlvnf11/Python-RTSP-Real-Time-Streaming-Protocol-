@@ -19,9 +19,9 @@ Contents
   
 How to use
 =============
-'''
+```
 python main.py --ip 192.168.1.1 --port 8554 --path /test/test --id admin --password admin --rtsp_transport udp --buffer_size 425984
-'''
+```
 
 References
 =============
