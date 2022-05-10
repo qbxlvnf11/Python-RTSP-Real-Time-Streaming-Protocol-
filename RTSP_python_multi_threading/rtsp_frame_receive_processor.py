@@ -76,7 +76,7 @@ class RtspFrameReceiveProcessor(threading.Thread):
 					img_id += 1
 					
 					# Get time
-					get_time = float(frame.pts * self.stream.time_base)
+					time = float(frame.pts * self.stream.time_base)
 					
 					# Get img
 					img = frame.to_image()
