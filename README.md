@@ -6,13 +6,17 @@ Description
   - An application-level network protocol designed for multiplexing and packetizing multimedia transport streams (such as interactive media, video and audio) over a suitable transport protocol
   - Details about RTSP: https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol
 
+#### - VLC Media Plyaer
+  - Tools of uploading test video to RTSP server 
+  - Building RTSP server which sends test video using VLC Media Player before run this code.
+
 Contents
 =============
 
-#### - [PyAV RTSP streaming](https://github.com/qbxlvnf11/RTSP-multi-threading-python/blob/main/RTSP_python_test.ipynb)
-  - Simple RTSP streaming code using PyAV in jupyter notebook
+#### - [PyAV RTSP streaming](https://github.com/qbxlvnf11/RTSP-streaming-multi-threading/blob/RTSP_streaming_web_server/RTSP_python_test.ipynb)
+  - Simple RTSP streaming code with PyAV
   
-#### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-multi-threading-python/tree/main/RTSP_python_multi_threading)
+#### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-streaming-multi-threading/tree/RTSP_streaming_web_server/RTSP_python_multi_threading)
   - Streaming results
   
   <img src="https://user-images.githubusercontent.com/52263269/167385545-d4338dd8-0a63-4409-a64c-35f6d91a15f1.png" width="60%"></img>
@@ -24,6 +28,9 @@ Contents
   
 How to use
 =============
+
+#### - Streaming web server
+
 ```
 python main.py --ip 192.168.1.1 --port 8554 --path /test/test --id admin --password admin --rtsp_transport udp --buffer_size 425984
 ```
