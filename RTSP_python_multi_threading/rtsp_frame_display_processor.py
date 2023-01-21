@@ -40,6 +40,7 @@ class RtspFrameDisplayProcessor():
 				
 				# Processing img		
 				img = cv2.resize(img, dsize=(self.resize_width, self.resize_height), interpolation=cv2.INTER_AREA)
+				img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 				
 				# Open board
 				if not set_flag:
