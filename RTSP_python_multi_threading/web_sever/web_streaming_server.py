@@ -1,0 +1,50 @@
+from flask import Flask, render_template, Response
+import cv2
+import webbrowser
+
+class WebStreamingServer:
+
+	def __init__(self, host, port, browser_path, result_queue, \
+		resize_width, resize_height):
+		
+		self.host = host
+		self.port = port
+		self.browser_path = browser_path
+		self.result_queue = result_queue
+		
+		self.app = Flask(__name__)
+		
+		print('Start web server ...')
+		
+		def get_result_frame():
+			
+			while True:
+			
+				if not self.result_queue.empty():
+				
+					# Get frame
+					frame = self.result_queue.get()
+					img = frame.get_img()
+					img = cv2.resize(img, dsize=(resize_width, resize_height), interpolation=cv2.INTER_AREA)
+					img_id = frame.get_img_id()
+					#print('img_id:', img_id)
+		
+					ret, buffer = cv2.imencode('.jpg', img)
+					img = buffer.tobytes()
+					yield (b'--frame\r\n'
+					b'Content-Type: image/jpeg\r\n\r\n' + img + b'\r\n')  # concat frame one by one and show result
+					
+		@self.app.route('/video_feed')
+		def video_feed():
+			# Video streaming route. Put this in the src attribute of an img tag
+			return Response(get_result_frame(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+		@self.app.route('/')
+		def index():
+			# Rendering video streaming home page
+			return render_template('streaming.html')
+
+	def run_web_server(self):
+		self.app.run(host=self.host,
+		port=self.port)
+		

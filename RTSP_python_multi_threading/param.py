@@ -3,7 +3,7 @@ import argparse
 def get_parser():
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument("--fps", type=int, default=3)
+	parser.add_argument("--fps", type=int, default=10)
 	
 	# RTSP
 	parser.add_argument("--ip", type=str)
@@ -23,5 +23,11 @@ def get_parser():
 	# Frame queue
 	parser.add_argument("--max_size", type=int, default=-1)
 	parser.add_argument("--skip_count", type=int, default=1)
+	
+	# Web server
+	parser.add_argument("--activate_web_server", action="store_true")
+	parser.add_argument("--browser_path", type=str, default='/usr/bin/google-chrome %s')
+	parser.add_argument("--web_server_host", type=str, default='0.0.0.0')
+	parser.add_argument("--web_server_port", type=int, default=5000)
 	
 	return parser.parse_args()
