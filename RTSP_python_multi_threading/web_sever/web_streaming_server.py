@@ -25,9 +25,12 @@ class WebStreamingServer:
 					# Get frame
 					frame = self.result_queue.get()
 					img = frame.get_img()
-					img = cv2.resize(img, dsize=(resize_width, resize_height), interpolation=cv2.INTER_AREA)
 					img_id = frame.get_img_id()
 					#print('img_id:', img_id)
+					
+					# Processing img
+					img = cv2.resize(img, dsize=(resize_width, resize_height), interpolation=cv2.INTER_AREA)
+					img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 		
 					ret, buffer = cv2.imencode('.jpg', img)
 					img = buffer.tobytes()
