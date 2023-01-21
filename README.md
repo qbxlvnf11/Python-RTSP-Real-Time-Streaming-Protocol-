@@ -17,9 +17,9 @@ Contents
   - Simple RTSP streaming code with PyAV
   
 #### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-streaming-multi-threading/tree/RTSP_streaming_web_server/RTSP_python_multi_threading)
-  - Streaming results
+  - Streaming web page
   
-  <img src="https://user-images.githubusercontent.com/52263269/167385545-d4338dd8-0a63-4409-a64c-35f6d91a15f1.png" width="60%"></img>
+  <img src="https://user-images.githubusercontent.com/52263269/213881539-bf633b00-ad47-4704-9e8d-f6f21b8ef9a6.png" width="60%"></img>
   
   - Separating the thread that reads the frame from rtsp server and the thread that shows the read frame 
   - Main thread: displaying the frame read from rtsp server
@@ -29,7 +29,9 @@ Contents
 How to use
 =============
 
-#### - Streaming web server
+#### - Open RTSP streaming web server
+  - ip/port/path: RTSP address info
+  - admin/password: RTSP connection info
 
 ```
 python main.py --ip 192.168.1.1 --port 8554 --path /test/test --id admin --password admin --rtsp_transport udp --buffer_size 425984
