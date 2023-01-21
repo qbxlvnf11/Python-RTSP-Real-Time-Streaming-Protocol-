@@ -8,7 +8,7 @@ Description
   
 #### - VLC Media Plyaer
   - Tools of uploading test video to RTSP server 
-  - How to use VLC Media Plyaer? https://blog.naver.com/qbxlvnf11/222723870300
+  - Building RTSP server which sends test video using VLC Media Player before run this code.
 
 Contents
 =============
