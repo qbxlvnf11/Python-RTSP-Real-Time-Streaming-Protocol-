@@ -7,14 +7,14 @@ Description
   - Details about RTSP: https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol
   
 #### - VLC Media Plyaer
-  - Upload test video in RTSP server 
+  - Tools of uploading test video to RTSP server 
   - How to use VLC Media Plyaer? https://blog.naver.com/qbxlvnf11/222723870300
 
 Contents
 =============
 
 #### - [PyAV RTSP streaming](https://github.com/qbxlvnf11/RTSP-multi-threading-python/blob/main/RTSP_python_test.ipynb)
-  - Simple RTSP streaming code using PyAV in jupyter notebook
+  - Simple RTSP streaming code with PyAV
   
 #### - [RTSP streaming with multi threading](https://github.com/qbxlvnf11/RTSP-multi-threading-python/tree/main/RTSP_python_multi_threading)
   - Streaming results
